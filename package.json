@@ -1,0 +1,15 @@
+{
+  "name": "oriz-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run copy-cf-files",
+    "copy-cf-files": "copy _headers dist\\_headers && copy _redirects dist\\_redirects",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  }
+}
