@@ -1,200 +1,171 @@
-# Oriz - Technology Solutions & Digital Services
+# ◈ Oriz
 
-A modern, professional static website for Oriz, showcasing our suite of utility websites and digital services.
+**Technology Company — Building the Utility Web**
 
-## 🚀 Features
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://oriz.in)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-- **Modern Design**: Clean, professional aesthetic with smooth animations
-- **Fully Responsive**: Optimized for all devices (desktop, tablet, mobile)
-- **TypeScript**: Type-safe code for better maintainability
-- **Fast Performance**: Built with Vite for lightning-fast builds
-- **SEO Optimized**: Comprehensive meta tags and semantic HTML
-- **Cloudflare Pages Ready**: Optimized for deployment on Cloudflare Pages
+> Oriz builds powerful utility websites and services — from financial calculators to developer toolkits and custom business solutions.
 
-## 🛠️ Tech Stack
+🌐 **Live**: [oriz.in](https://oriz.in)
 
-- **TypeScript** - Type-safe JavaScript
-- **Vite** - Next-generation frontend tooling
-- **CSS3** - Modern styling with CSS variables
-- **HTML5** - Semantic markup
+---
 
-## 📦 Products Showcased
+## 🚀 Products
 
-1. **Fin Suite** (fin.oriz.in) - Financial tools and calculators
-2. **Dev Suite** (dev.oriz.in) - Developer tools and utilities
-3. **Velvet** - Adult content platform
-4. **Office Suite** - Office file management tools
-5. **Pixel** - Image processing and manipulation tools
-6. **Utility Tools** (tools.oriz.in) - Collection of web utilities
+| Product | Domain | Description |
+|---------|--------|-------------|
+| **FinSuit** | [fin.oriz.in](https://fin.oriz.in) | Comprehensive suite of financial calculators — EMI, SIP, tax planning, currency conversion, retirement planning |
+| **DevSuit** | [dev.oriz.in](https://dev.oriz.in) | Developer utility toolkit — JSON/XML formatters, regex testers, encoders/decoders, color pickers, code minifiers |
 
-## 🏃 Getting Started
+## 🛠️ Services
 
-### Prerequisites
+- **Web Development** — Custom websites and web applications with modern frameworks
+- **Utility Platforms** — Purpose-built calculators, converters, and interactive tools
+- **Progressive Web Apps** — Offline-capable, installable web experiences
+- **API Development** — Scalable RESTful APIs with developer-friendly documentation
+- **SEO & Performance** — Core Web Vitals optimization and technical SEO audits
+- **Cloud Deployment** — Edge-deployed apps on Cloudflare, AWS, and Vercel
 
-- Node.js 18+ and npm
+## ⚙️ Tech Stack
 
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd oriz
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-The site will be available at `http://localhost:3000`
-
-## 🔨 Build
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## 🌐 Deployment to Cloudflare Pages
-
-### Method 1: Git Integration (Recommended)
-
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-3. Go to **Pages** → **Create a project**
-4. Connect your Git repository
-5. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Build output directory**: `dist`
-   - **Root directory**: `/` (or leave empty)
-6. Click **Save and Deploy**
-
-### Method 2: Direct Upload
-
-1. Build the project locally:
-```bash
-npm run build
-```
-
-2. Install Wrangler CLI:
-```bash
-npm install -g wrangler
-```
-
-3. Login to Cloudflare:
-```bash
-wrangler login
-```
-
-4. Deploy to Cloudflare Pages:
-```bash
-wrangler pages deploy dist --project-name=oriz
-```
-
-### Environment Variables
-
-No environment variables are required for this static site.
-
-### Custom Domain
-
-To add a custom domain (oriz.in):
-
-1. Go to your Cloudflare Pages project
-2. Navigate to **Custom domains**
-3. Click **Set up a custom domain**
-4. Enter your domain name
-5. Follow the DNS configuration instructions
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | TypeScript, React, Vite, Next.js, HTML5, CSS3 |
+| **Backend** | Node.js, Python, FastAPI, Express, REST APIs |
+| **Infrastructure** | Cloudflare Pages, Cloudflare Workers, GitHub Actions, Docker, Vercel |
+| **Tools** | Git, ESLint, Prettier, Vitest, Playwright |
 
 ## 📁 Project Structure
 
 ```
 oriz/
-├── public/              # Static assets
-│   └── favicon.svg      # Site favicon
-├── src/                 # Source files
-│   ├── main.ts          # Main TypeScript file
-│   └── style.css        # Global styles
-├── index.html           # HTML template
-├── package.json         # Dependencies and scripts
-├── tsconfig.json        # TypeScript configuration
-├── vite.config.ts       # Vite configuration
-├── _headers             # Cloudflare Pages headers
-├── _redirects           # Cloudflare Pages redirects
-└── README.md            # This file
+├── index.html            # Main HTML — single-page layout with SEO meta tags
+├── src/
+│   ├── main.ts           # TypeScript entry — nav, scrolling, animations
+│   ├── style.css         # Design system — dark theme, glassmorphism, responsive
+│   └── vite-env.d.ts     # Vite type references
+├── public/
+│   ├── favicon.svg       # Gradient SVG favicon
+│   ├── robots.txt        # Crawler rules
+│   └── _headers          # Cloudflare Pages headers (caching + security)
+├── ops/
+│   ├── config.py         # Centralized deployment configuration
+│   ├── build.py          # Build utilities (build, clean, validate)
+│   ├── deploy_all.py     # Multi-platform deployment orchestrator
+│   ├── deploy_cf.py      # Cloudflare Pages deployment
+│   ├── deploy_netlify.py # Netlify deployment (CLI + API fallback)
+│   ├── deploy_vercel.py  # Vercel deployment
+│   ├── deploy_surge.py   # Surge.sh deployment
+│   ├── deploy_neocities.py # Neocities deployment (API batch upload)
+│   ├── dns_cloudflare.py # Cloudflare DNS management
+│   ├── dns_spaceship.py  # Spaceship DNS / nameserver management
+│   ├── manage_files.py   # File analysis, integrity checks, backups
+│   └── manage_email.py   # Email routing via Cloudflare Email Routing
+├── vite.config.ts        # Vite build configuration
+├── tsconfig.json         # TypeScript strict config
+└── package.json          # Dependencies and scripts
 ```
 
-## 🎨 Customization
+## 🏁 Getting Started
 
-### Colors
+### Prerequisites
 
-Edit CSS variables in `src/style.css`:
+- [Node.js](https://nodejs.org/) ≥ 18
+- npm ≥ 9
 
-```css
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #8b5cf6;
-  /* ... more variables */
-}
+### Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server (http://localhost:3000)
+npm run dev
 ```
 
-### Products
+### Production Build
 
-Edit the products array in `src/main.ts`:
+```bash
+# Type-check and build
+npm run build
 
-```typescript
-const products: Product[] = [
-  {
-    name: 'Your Product',
-    description: 'Product description',
-    url: 'https://your-url.com',
-    category: 'utility',
-    icon: '🚀'
-  }
-]
+# Preview production build
+npm run preview
 ```
 
-## 🔒 Security Headers
+## ☁️ Deployment
 
-The site includes security headers configured in `_headers`:
-- X-Frame-Options
-- X-Content-Type-Options
-- X-XSS-Protection
-- Referrer-Policy
-- Permissions-Policy
+### Cloudflare Pages
 
-## 📱 Browser Support
+This project is optimized for **Cloudflare Pages** with:
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Node.js version**: `18`
+
+Security and caching headers are configured in [`public/_headers`](public/_headers).
+
+### Manual Deploy
+
+1. Push to the connected GitHub repository
+2. Cloudflare Pages auto-deploys from the `main` branch
+3. Custom domain `oriz.in` is configured via Cloudflare DNS
+
+### Ops Scripts
+
+The `ops/` directory contains Python deployment and management scripts. All scripts load credentials from `.env`.
+
+```bash
+# Install Python dependencies
+pip install python-dotenv requests
+
+# Deploy to all enabled platforms
+python ops/deploy_all.py
+
+# Deploy to individual platforms
+python ops/deploy_cf.py           # Cloudflare Pages
+python ops/deploy_netlify.py      # Netlify
+python ops/deploy_vercel.py       # Vercel
+python ops/deploy_surge.py        # Surge.sh
+python ops/deploy_neocities.py    # Neocities
+
+# DNS management
+python ops/dns_cloudflare.py --list       # List DNS records
+python ops/dns_cloudflare.py --setup      # Set up DNS for oriz.in
+python ops/dns_cloudflare.py --email      # Set up email DNS records
+python ops/dns_spaceship.py --domains     # List Spaceship domains
+python ops/dns_spaceship.py --setup-cf-ns # Set Cloudflare nameservers
+python ops/dns_spaceship.py --verify-ns   # Verify NS configuration
+
+# File management
+python ops/manage_files.py --analyze      # Analyze dist directory
+python ops/manage_files.py --verify       # Verify build integrity
+python ops/manage_files.py --checksums    # Generate SHA256 checksums
+python ops/manage_files.py --clean        # Clean build artifacts
+python ops/manage_files.py --backup       # Backup dist directory
+
+# Email management (chiragsinghal127@gmail.com)
+python ops/manage_email.py --setup        # Set up Cloudflare Email Routing
+python ops/manage_email.py --list-rules   # List routing rules
+python ops/manage_email.py --test         # Send test deployment report
+```
+
+## ✨ Features
+
+- **Dark Theme** — Premium dark palette with purple-to-cyan gradient accents
+- **Glassmorphism Cards** — Frosted-glass UI components with blur effects
+- **Scroll Animations** — IntersectionObserver-based fade-in reveals
+- **Mobile Responsive** — Hamburger menu and fluid layouts for all screen sizes
+- **Smooth Scrolling** — Click-to-scroll navigation with header offset
+- **Active Section Tracking** — Nav highlights current section on scroll
+- **SEO Optimized** — Open Graph, Twitter Cards, semantic HTML, meta descriptions
+- **Performance** — Minimal dependencies, tree-shaken, aggressively cached
+- **Accessibility** — ARIA labels, keyboard navigation, reduced-motion support
+- **Security Headers** — X-Content-Type-Options, X-Frame-Options, Referrer-Policy
 
 ## 📄 License
 
-Copyright © 2024 Oriz. All rights reserved.
-
-## 🤝 Contributing
-
-This is a private project for Oriz. For inquiries, please contact the development team.
-
-## 📞 Support
-
-For support or questions, please contact the Oriz team.
-
----
-
-Built with ❤️ by Oriz
+MIT © [Oriz](https://oriz.in)

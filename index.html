@@ -1,152 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oriz — Technology Company | Utility Websites &amp; Services</title>
+    <meta
+      name="description"
+      content="Oriz is a technology company specializing in building utility websites and services. Explore our products like FinSuit and DevSuit, and discover how we can help your business."
+    />
+    <meta
+      name="keywords"
+      content="Oriz, technology company, utility websites, FinSuit, DevSuit, web development, financial tools, developer tools"
+    />
+    <meta name="author" content="Oriz" />
+    <meta name="robots" content="index, follow" />
 
-  <!-- SEO Meta Tags -->
-  <title>Oriz - Technology Solutions & Digital Services</title>
-  <meta name="description" content="Oriz is a technology company specializing in utility websites and digital services. Explore our suite of financial tools, developer utilities, and innovative products.">
-  <meta name="keywords" content="Oriz, technology, utility websites, financial tools, developer tools, digital services">
-  <meta name="author" content="Oriz">
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Oriz — Technology Company | Utility Websites & Services"
+    />
+    <meta
+      property="og:description"
+      content="Oriz builds utility websites and services. Explore FinSuit, DevSuit, and custom solutions for your business."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oriz.in" />
+    <meta property="og:site_name" content="Oriz" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Oriz - Technology Solutions & Digital Services">
-  <meta property="og:description" content="Explore Oriz's suite of utility websites and digital services including financial tools, developer utilities, and more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://oriz.in">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Oriz — Technology Company | Utility Websites & Services"
+    />
+    <meta
+      name="twitter:description"
+      content="Oriz builds utility websites and services. Explore FinSuit, DevSuit, and custom solutions for your business."
+    />
 
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Oriz - Technology Solutions & Digital Services">
-  <meta name="twitter:description" content="Explore Oriz's suite of utility websites and digital services.">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://oriz.in" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <script type="module" src="/src/main.ts"></script>
-</head>
-<body>
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav container">
-      <div class="nav-brand">
-        <h1 class="logo">Oriz</h1>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#products" class="nav-link">Products</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h2 class="hero-title">Empowering Digital Innovation</h2>
-        <p class="hero-subtitle">Oriz delivers cutting-edge utility websites and digital services that transform how businesses and individuals interact with technology.</p>
-        <div class="hero-cta">
-          <a href="#products" class="btn btn-primary">Explore Products</a>
-          <a href="#about" class="btn btn-secondary">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header id="header" class="header">
+      <nav class="nav container">
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-icon">◈</span>
+          <span class="nav__logo-text">Oriz</span>
+        </a>
 
-  <!-- Products Section -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2 class="section-title">Our Products & Services</h2>
-      <p class="section-subtitle">Comprehensive digital solutions tailored for modern needs</p>
+        <button
+          id="nav-toggle"
+          class="nav__toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
 
-      <div class="products-grid" id="productsGrid">
-        <!-- Products will be dynamically inserted here -->
-      </div>
-    </div>
-  </section>
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#products" class="nav__link">Products</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#tech" class="nav__link">Tech Stack</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-content">
-        <h2 class="section-title">About Oriz</h2>
-        <p class="about-text">
-          Oriz is a forward-thinking technology company dedicated to developing innovative utility websites and providing comprehensive digital services. We specialize in creating powerful tools that simplify complex tasks, from financial calculations to developer utilities.
-        </p>
-        <p class="about-text">
-          Our mission is to empower businesses and individuals with accessible, efficient, and reliable digital solutions. We combine cutting-edge technology with user-centric design to deliver products that make a real difference.
-        </p>
-        <div class="about-stats">
-          <div class="stat">
-            <h3 class="stat-number">6+</h3>
-            <p class="stat-label">Product Suites</p>
+    <main>
+      <!-- ===== HERO ===== -->
+      <section id="hero" class="hero">
+        <div class="hero__bg-glow"></div>
+        <div class="hero__bg-glow hero__bg-glow--secondary"></div>
+        <div class="container hero__content">
+          <p class="hero__badge animate-on-scroll">Technology Company</p>
+          <h1 class="hero__title animate-on-scroll">
+            Building the
+            <span class="gradient-text">Utility Web</span>
+          </h1>
+          <p class="hero__subtitle animate-on-scroll">
+            We create powerful, elegant utility websites and services that
+            simplify complex tasks — from financial calculations to developer
+            tooling and beyond.
+          </p>
+          <div class="hero__actions animate-on-scroll">
+            <a href="#products" class="btn btn--primary">Explore Products</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
           </div>
-          <div class="stat">
-            <h3 class="stat-number">15+</h3>
-            <p class="stat-label">Utility Tools</p>
+          <div class="hero__stats animate-on-scroll">
+            <div class="hero__stat">
+              <span class="hero__stat-value">2+</span>
+              <span class="hero__stat-label">Products Live</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-value">50+</span>
+              <span class="hero__stat-label">Tools Built</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-value">24/7</span>
+              <span class="hero__stat-label">Availability</span>
+            </div>
           </div>
-          <div class="stat">
-            <h3 class="stat-number">100%</h3>
-            <p class="stat-label">Commitment</p>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="about section">
+        <div class="container">
+          <p class="section__badge animate-on-scroll">Who We Are</p>
+          <h2 class="section__title animate-on-scroll">
+            Technology with <span class="gradient-text">Purpose</span>
+          </h2>
+          <div class="about__grid">
+            <div class="about__card glass-card animate-on-scroll">
+              <div class="about__card-icon">🎯</div>
+              <h3 class="about__card-title">Our Mission</h3>
+              <p class="about__card-text">
+                To build utility-first web platforms that solve real problems.
+                We focus on creating tools that are fast, accessible, and
+                delightful to use — empowering individuals and businesses
+                with the technology they need.
+              </p>
+            </div>
+            <div class="about__card glass-card animate-on-scroll">
+              <div class="about__card-icon">⚡</div>
+              <h3 class="about__card-title">What We Do</h3>
+              <p class="about__card-text">
+                We specialize in designing and developing utility websites
+                — from financial calculators to developer toolkits. We also
+                build custom web solutions for businesses looking for
+                reliable, performant digital products.
+              </p>
+            </div>
+            <div class="about__card glass-card animate-on-scroll">
+              <div class="about__card-icon">🚀</div>
+              <h3 class="about__card-title">Our Approach</h3>
+              <p class="about__card-text">
+                Every project starts with performance and user experience at
+                its core. We use modern technologies, deploy globally on
+                edge networks, and iterate quickly — delivering products
+                that just work.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Have questions or want to learn more about our services?</p>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>We'd love to hear from you. Reach out to us for inquiries, partnerships, or support.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- ===== PRODUCTS ===== -->
+      <section id="products" class="products section">
+        <div class="container">
+          <p class="section__badge animate-on-scroll">Our Products</p>
+          <h2 class="section__title animate-on-scroll">
+            Platforms that <span class="gradient-text">Deliver</span>
+          </h2>
+          <p class="section__subtitle animate-on-scroll">
+            Our flagship products serve thousands of users with powerful,
+            free-to-use utility tools.
+          </p>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3 class="logo">Oriz</h3>
-          <p>Empowering digital innovation through utility websites and services.</p>
+          <div class="products__grid">
+            <!-- FinSuit -->
+            <article class="product-card glass-card animate-on-scroll">
+              <div class="product-card__header product-card__header--fin">
+                <span class="product-card__icon">💰</span>
+                <span class="product-card__badge">Live</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">FinSuit</h3>
+                <p class="product-card__domain">fin.oriz.in</p>
+                <p class="product-card__desc">
+                  A comprehensive suite of financial calculators and tools.
+                  From EMI and SIP calculators to tax planners and investment
+                  analysis — FinSuit makes personal finance simple and
+                  accessible for everyone.
+                </p>
+                <ul class="product-card__features">
+                  <li>EMI &amp; Loan Calculators</li>
+                  <li>SIP &amp; Investment Planners</li>
+                  <li>Tax Estimation Tools</li>
+                  <li>Currency Converters</li>
+                  <li>Retirement Planning</li>
+                </ul>
+                <a
+                  href="https://fin.oriz.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--primary btn--full"
+                >
+                  Visit FinSuit →
+                </a>
+              </div>
+            </article>
+
+            <!-- DevSuit -->
+            <article class="product-card glass-card animate-on-scroll">
+              <div class="product-card__header product-card__header--dev">
+                <span class="product-card__icon">🛠️</span>
+                <span class="product-card__badge">Live</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">DevSuit</h3>
+                <p class="product-card__domain">dev.oriz.in</p>
+                <p class="product-card__desc">
+                  A powerful collection of developer utilities and tools.
+                  JSON formatters, regex testers, encoders/decoders, color
+                  pickers, and much more — DevSuit is the developer's
+                  everyday companion.
+                </p>
+                <ul class="product-card__features">
+                  <li>JSON / XML Formatters</li>
+                  <li>Regex Tester &amp; Debugger</li>
+                  <li>Base64 / URL Encoders</li>
+                  <li>Color Pickers &amp; Converters</li>
+                  <li>Code Minifiers &amp; Beautifiers</li>
+                </ul>
+                <a
+                  href="https://dev.oriz.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--primary btn--full"
+                >
+                  Visit DevSuit →
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Products</h4>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section id="services" class="services section">
+        <div class="container">
+          <p class="section__badge animate-on-scroll">Services</p>
+          <h2 class="section__title animate-on-scroll">
+            Built for <span class="gradient-text">Businesses</span>
+          </h2>
+          <p class="section__subtitle animate-on-scroll">
+            Beyond our products, we build custom web solutions for
+            businesses. Here's what we bring to the table.
+          </p>
+
+          <div class="services__grid">
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">🌐</div>
+              <h3 class="service-card__title">Web Development</h3>
+              <p class="service-card__text">
+                Custom websites and web applications built with modern
+                frameworks. Fast, responsive, and optimized for
+                performance.
+              </p>
+            </div>
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">🧮</div>
+              <h3 class="service-card__title">Utility Platforms</h3>
+              <p class="service-card__text">
+                Purpose-built utility websites with calculators, converters,
+                and interactive tools tailored to your industry.
+              </p>
+            </div>
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">📱</div>
+              <h3 class="service-card__title">Progressive Web Apps</h3>
+              <p class="service-card__text">
+                App-like web experiences that work offline, load instantly,
+                and can be installed on any device.
+              </p>
+            </div>
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">⚙️</div>
+              <h3 class="service-card__title">API Development</h3>
+              <p class="service-card__text">
+                RESTful APIs and backend services designed for scale,
+                reliability, and developer-friendly documentation.
+              </p>
+            </div>
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">🔍</div>
+              <h3 class="service-card__title">SEO &amp; Performance</h3>
+              <p class="service-card__text">
+                Technical SEO audits, Core Web Vitals optimization, and
+                performance tuning to maximize your web presence.
+              </p>
+            </div>
+            <div class="service-card glass-card animate-on-scroll">
+              <div class="service-card__icon">☁️</div>
+              <h3 class="service-card__title">Cloud Deployment</h3>
+              <p class="service-card__text">
+                Edge-deployed applications on Cloudflare, AWS, and Vercel
+                for global availability and minimal latency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TECH STACK ===== -->
+      <section id="tech" class="tech section">
+        <div class="container">
+          <p class="section__badge animate-on-scroll">Tech Stack</p>
+          <h2 class="section__title animate-on-scroll">
+            Powered by <span class="gradient-text">Modern Tech</span>
+          </h2>
+          <p class="section__subtitle animate-on-scroll">
+            We use industry-leading technologies to build fast, scalable,
+            and maintainable products.
+          </p>
+
+          <div class="tech__grid">
+            <div class="tech__category animate-on-scroll">
+              <h3 class="tech__category-title">Frontend</h3>
+              <div class="tech__badges">
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Vite</span>
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+              </div>
+            </div>
+            <div class="tech__category animate-on-scroll">
+              <h3 class="tech__category-title">Backend</h3>
+              <div class="tech__badges">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">REST APIs</span>
+              </div>
+            </div>
+            <div class="tech__category animate-on-scroll">
+              <h3 class="tech__category-title">Infrastructure</h3>
+              <div class="tech__badges">
+                <span class="tech-badge">Cloudflare Pages</span>
+                <span class="tech-badge">Cloudflare Workers</span>
+                <span class="tech-badge">GitHub Actions</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Vercel</span>
+              </div>
+            </div>
+            <div class="tech__category animate-on-scroll">
+              <h3 class="tech__category-title">Tools &amp; Testing</h3>
+              <div class="tech__badges">
+                <span class="tech-badge">Git</span>
+                <span class="tech-badge">ESLint</span>
+                <span class="tech-badge">Prettier</span>
+                <span class="tech-badge">Vitest</span>
+                <span class="tech-badge">Playwright</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="contact section">
+        <div class="container">
+          <p class="section__badge animate-on-scroll">Contact</p>
+          <h2 class="section__title animate-on-scroll">
+            Let's <span class="gradient-text">Connect</span>
+          </h2>
+          <p class="section__subtitle animate-on-scroll">
+            Have a project in mind? Want to collaborate? We'd love to hear
+            from you.
+          </p>
+
+          <div class="contact__grid">
+            <div class="contact__card glass-card animate-on-scroll">
+              <div class="contact__card-icon">📧</div>
+              <h3 class="contact__card-title">Email</h3>
+              <a href="mailto:hello@oriz.in" class="contact__card-link"
+                >hello@oriz.in</a
+              >
+            </div>
+            <div class="contact__card glass-card animate-on-scroll">
+              <div class="contact__card-icon">🐙</div>
+              <h3 class="contact__card-title">GitHub</h3>
+              <a
+                href="https://github.com/chirag127"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact__card-link"
+                >github.com/chirag127</a
+              >
+            </div>
+            <div class="contact__card glass-card animate-on-scroll">
+              <div class="contact__card-icon">🌍</div>
+              <h3 class="contact__card-title">Website</h3>
+              <a
+                href="https://oriz.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact__card-link"
+                >oriz.in</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__content">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">
+            <span class="nav__logo-icon">◈</span>
+            <span>Oriz</span>
+          </a>
+          <p class="footer__tagline">
+            Building the utility web — one product at a time.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Products</h4>
             <ul>
-              <li><a href="https://fin.oriz.in" target="_blank" rel="noopener">Fin Suite</a></li>
-              <li><a href="https://dev.oriz.in" target="_blank" rel="noopener">Dev Suite</a></li>
-              <li><a href="https://tools.oriz.in" target="_blank" rel="noopener">Tools</a></li>
+              <li>
+                <a href="https://fin.oriz.in" target="_blank" rel="noopener noreferrer">FinSuit</a>
+              </li>
+              <li>
+                <a href="https://dev.oriz.in" target="_blank" rel="noopener noreferrer">DevSuit</a>
+              </li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h4>Company</h4>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Company</h4>
             <ul>
               <li><a href="#about">About</a></li>
-              <li><a href="#products">Products</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Connect</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/chirag127" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li><a href="mailto:hello@oriz.in">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2026 Oriz. All rights reserved.</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Oriz. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
