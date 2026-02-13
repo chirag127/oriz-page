@@ -33,6 +33,9 @@ def deploy_to_cloudflare():
 
     project_name = CLOUDFLARE.get('project_name', 'oriz')
 
+    # Ensure project exists
+    create_cloudflare_project()
+
     try:
         # Use wrangler pages deploy
         result = subprocess.run(

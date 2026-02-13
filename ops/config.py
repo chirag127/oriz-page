@@ -60,7 +60,7 @@ NEOCITIES = {
 SPACESHIP = {
     'api_key': os.getenv('SPACESHIP_API_KEY'),
     'api_secret': os.getenv('SPACESHIP_API_SECRET'),
-    'api_url': os.getenv('SPACESHIP_API_URL', 'https://spaceship.dev/api/v1'),
+    'api_url': os.getenv('SPACESHIP_API_URL', 'https://api.spaceship.com/v1'),
 }
 
 # GitHub Configuration

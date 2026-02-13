@@ -134,6 +134,17 @@ def update_dns_record(zone_id: str, record_id: str, record_type: str, name: str,
         return False
 
 
+def cleanup_dns_records(zone_id: str):
+    """Delete CNAME for root domain or www if they exist and point to pages"""
+    records = list_dns_records(zone_id)
+    forbidden_names = [DOMAIN, f'www.{DOMAIN}']
+    for record in records:
+        if record['type'] == 'CNAME' and record['name'] in forbidden_names:
+            print(f"🗑️ Deleting forbidden record: {record['name']} -> {record['content']}")
+            delete_dns_record(zone_id, record['id'])
+    return True
+
+
 def add_pages_custom_domain(project_name: str, domain: str):
     """Add custom domain to Cloudflare Pages project"""
     url = f"https://api.cloudflare.com/client/v4/accounts/{CLOUDFLARE['account_id']}/pages/projects/{project_name}/domains"
@@ -216,8 +227,7 @@ def setup_oriz_dns(pages_url: str = None):
 
     # CNAME records to create
     cname_targets = [
-        (DOMAIN, pages_url),           # Root domain
-        (f'www.{DOMAIN}', pages_url),   # www subdomain
+        (f'about.{DOMAIN}', pages_url),   # Only about subdomain
     ]
 
     results = []
@@ -241,8 +251,10 @@ def setup_oriz_dns(pages_url: str = None):
 
     # Add custom domains to Pages project
     project_name = CLOUDFLARE.get('project_name', 'oriz')
-    add_pages_custom_domain(project_name, DOMAIN)
-    add_pages_custom_domain(project_name, f'www.{DOMAIN}')
+    add_pages_custom_domain(project_name, f'about.{DOMAIN}')
+
+    # Cleanup irrelevant domains if they exist
+    cleanup_dns_records(zone_id)
 
     success_count = sum(1 for _, s in results if s)
     print(f"\n📊 DNS Setup: {success_count}/{len(results)} records created")
